@@ -30,8 +30,9 @@ main {
 }
 
 .logoSection img {
-    transition: 1s;
+    transition: .3s;
     width: 52rem;
+    filter: brightness(60%);
 }
 
 @media (max-width: 1325px) {
@@ -39,8 +40,12 @@ main {
         font-size: 5rem;
     }
 
+    .powerIcon img {
+        width: 3rem;
+    }
+
     .logoSection img {
-        width: 20rem;
+        width: 30rem;
     }
 }
 
