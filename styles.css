@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #171717;
+    font-family: 'Roboto Serif';
+    color: #FAFAFA;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.welcomeSection p {
+    font-size: 8rem;
+}
+
+.logoSection img {
+    width: 52rem;
+    height: 52rem;
+}
