@@ -30,6 +30,28 @@ main {
 }
 
 .logoSection img {
+    transition: 1s;
     width: 52rem;
-    height: 52rem;
+}
+
+@media (max-width: 1325px) {
+    .welcomeSection p {
+        font-size: 5rem;
+    }
+
+    .logoSection img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10rem;
+    }
+    
+    .welcomeSection p {
+        text-align: center;
+    }
 }
