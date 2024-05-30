@@ -1,62 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #FAFAFA;
 }
 
 :root {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FB5352;
+    border-radius: 2rem;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+    filter: brightness(80%);
+}
+
+a:hover {
+    filter: brightness(100%);
+}
+
+.background {
+    margin: 0 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    background: #171717;
-    font-family: 'Roboto Serif';
-    color: #FAFAFA;
+    background: #000;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 main {
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    padding: 10rem;
+    text-align: center;
+}
+
+main h2 {
+    color: #FB5352;
+}
+
+main .powerIcon {
+    width: 6rem;
+}
+
+.services {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10rem;
+    gap: 4rem;
 }
 
-.welcomeSection p {
-    font-size: 8rem;
+.services .cards {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 
-.logoSection img {
-    transition: .3s;
-    width: 52rem;
-    filter: brightness(60%);
+.services h2 {
+    font-size: 3rem;
+    color: #FB5352;
 }
 
-@media (max-width: 1325px) {
-    .welcomeSection p {
-        font-size: 5rem;
+.services .card {
+    max-width: 30rem;
+    min-height: 40rem;
+    border-radius: 2.4rem;
+    background: #0F0F0F;
+    box-shadow: 0 0 1rem #afafaf;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 2.4rem 2.4rem 0 0;
+}
+
+.card .titleCard {
+    font-size: 02.5rem;
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    color: #FB5352;
+}
+
+.card .descriptionCard {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.about {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.about .text {
+    width: 60%;
+    text-align: center;
+}
+
+.about .text h2 {
+    color: #FB5352;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.contact {
+    margin-top: 5rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    color: #FB5352;
+    padding: 1rem;
+}
+
+.contact span {
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+.contact span img {
+    width: 3.2rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        display: none;
     }
 
-    .powerIcon img {
-        width: 3rem;
-    }
-
-    .logoSection img {
-        width: 30rem;
-    }
-}
-
-@media (max-width: 900px) {
     main {
-        flex-direction: column-reverse;
-        justify-content: center;
-        gap: 10rem;
+        margin-top: -2rem;
+        font-size: 3rem;
     }
-    
-    .welcomeSection p {
-        text-align: center;
+
+    main .powerIcon {
+        width: 5.2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    main {
+        font-size: 2.5rem;
     }
 }
