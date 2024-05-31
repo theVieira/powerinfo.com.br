@@ -122,6 +122,7 @@ main .powerIcon {
 }
 
 .services .card {
+    min-width: 24rem;
     max-width: 24rem;
     border-radius: 2.4rem;
     background: #0F0F0F;
@@ -232,7 +233,8 @@ main .powerIcon {
         margin-bottom: 0;
     }
     to {
-        margin-bottom: 100rem;
+        margin-bottom: 200rem;
+        display: none;
     }
 }
 
@@ -242,6 +244,7 @@ main .powerIcon {
     }
     to {
         opacity: 0%;
+        display: none;
     }
 }
 
@@ -250,6 +253,6 @@ main .powerIcon {
         margin-top: 100rem;
     }
     to {
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
 }
