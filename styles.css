@@ -33,10 +33,26 @@ a:hover {
 }
 
 .background {
-    margin: 0 50%;
-    transform: translateX(-50%);
+    width: 100vw;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.background img {
+    position: absolute;
+    bottom: 0;
+    animation: disappear 3s 2s both;
+}
+
+.background .rocket {
+    z-index: -10;
+    width: 30rem;
+    height: 70vh;
+    background-image: url('./assets/rocket.svg');
+    background-repeat: no-repeat;
+    animation: fligth 3s 1s both;
 }
 
 body {
@@ -126,10 +142,16 @@ main .powerIcon {
 }
 
 .about {
+    opacity: 0;
+    top: 10%;
+    position: absolute;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 2rem;
+    animation: appear 1s 2s both;
 }
 
 .about .text {
@@ -186,5 +208,32 @@ main .powerIcon {
 @media (max-width: 450px) {
     main {
         font-size: 2.5rem;
+    }
+}
+
+@keyframes fligth {
+    from {
+        margin-bottom: 0;
+    }
+    to {
+        margin-bottom: 100rem;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 80%;
     }
 }
