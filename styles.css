@@ -99,8 +99,7 @@ main .powerIcon {
     justify-content: center;
     flex-direction: column;
     gap: 4rem;
-    opacity: 0;
-    animation: appear 1s 2s both;
+    animation: upService 2s 1s both;
 }
 
 .services .cards {
@@ -143,7 +142,6 @@ main .powerIcon {
 
 .about {
     opacity: 0;
-    margin-top: 15rem;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -237,5 +235,14 @@ main .powerIcon {
     }
     to {
         opacity: 80%;
+    }
+}
+
+@keyframes upService {
+    from {
+        margin-top: 100rem;
+    }
+    to {
+        margin-top: 10rem;
     }
 }
