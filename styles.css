@@ -11,6 +11,7 @@
 :root {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +41,12 @@ a:hover {
     justify-content: center;
 }
 
-.background img {
+.background .clouds {
+    width: 100vw;
+    height: 15rem;
+    background: url('./assets/clouds.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     bottom: 0;
     animation: disappear 2.5s 1.5s both;
@@ -59,7 +65,6 @@ body {
     width: 100vw;
     height: 100vh;
     background: #000;
-    overflow-x: hidden;
 }
 
 header {
@@ -71,7 +76,7 @@ header {
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.5rem;
 }
 
@@ -94,6 +99,8 @@ main .powerIcon {
 }
 
 .services {
+    width: 100vw;
+    padding: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,8 +122,7 @@ main .powerIcon {
 }
 
 .services .card {
-    max-width: 30rem;
-    min-height: 40rem;
+    max-width: 24rem;
     border-radius: 2.4rem;
     background: #0F0F0F;
     box-shadow: 0 0 1rem #afafaf;
@@ -128,26 +134,24 @@ main .powerIcon {
 }
 
 .card .titleCard {
-    font-size: 02.5rem;
+    font-size: 2rem;
     text-align: center;
     padding: 1rem 1rem 0 1rem;
     color: #FB5352;
 }
 
 .card .descriptionCard {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     padding: 1rem;
 }
 
 .about {
-    opacity: 0;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    animation: appear 1s 2s both;
 }
 
 .about .text {
@@ -197,7 +201,15 @@ main .powerIcon {
     }
 
     main .powerIcon {
-        width: 5.2rem;
+        width: 4.5rem;
+    }
+
+    .card .titleCard {
+        font-size: 2rem;
+    }
+
+    .card .descriptionCard {
+        font-size: 1.2rem;
     }
 }
 
@@ -208,6 +220,10 @@ main .powerIcon {
 
     main {
         font-size: 2.5rem;
+    }
+
+    main .powerIcon {
+        width: 4rem;
     }
 }
 
@@ -226,15 +242,6 @@ main .powerIcon {
     }
     to {
         opacity: 0%;
-    }
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 80%;
     }
 }
 
